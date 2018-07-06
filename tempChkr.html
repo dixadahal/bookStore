@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% for row in rows %}
+    <tr> <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+
+      <!--p id="demo"></p>
+
+      <script>
+      var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+      var text = "";
+      var i;
+      for (i = 0; i < cars.length; i++) {
+          text += cars[i] + "<br>";
+      }
+      var stattemp =''
+      var stat = '/Users/rahulprakash/projects/img/'
+      stattemp = stat+"{{row['b_id']}}"+'.jpg'
+      '<img src= "stattemp" alt="Norway" style="width:50%" class="w3-hover-opacity"></br>'
+      var str = "<img src=\"" + imageName + "\" \/>";
+
+      document.getElementById("demo").innerHTML = text;
+      </script>
+      
+
+
+
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+        function myFunction() {
+            var x = document.createElement("IMG");
+            var num = 9999;
+            var stattemp =''
+            var stat = '/Users/rahulprakash/projects/img/'
+            stattemp = stat+"{{row['b_id']}}"+'.jpg'
+            x.setAttribute("src", "img_pulpit.jpg");
+            x.setAttribute("width", "304");
+            x.setAttribute("height", "228");
+            x.setAttribute("alt", "Norway");
+            document.body.appendChild(x);
+        }
+        </script>
+      </br>
+        <div class="w3-container w3-white"-->
+        <p><b>{{row["b_name"]}}</b></p>
+        <p>Book id: {{row["b_id"]}}</br>Author name :{{row["author_name"]}}</br> Book count:{{row["book_count"]}}</br><form action="">Review:
+       <textarea rows="3" cols="30">
+       </textarea>
+        </br></br>
+       <input type="submit" value="Submit">
+       </form></p>
+    </div>
+  </div>
+</div>
+</tr>
+{% endfor %}
+</body>
+</html>
